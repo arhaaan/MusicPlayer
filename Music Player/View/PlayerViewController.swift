@@ -56,6 +56,11 @@ class PlayerViewController: UIViewController {
    }
    
    @IBAction func playButtonTapped(_ sender: Any) {
+      if vm.isPlaying {
+         vm.stop()
+      } else {
+         vm.play()
+      }
    }
    
    @IBAction func nextButtonTapped(_ sender: Any) {
@@ -88,6 +93,8 @@ extension PlayerViewController: UITableViewDelegate, UITableViewDataSource {
    
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       playerControlView.isHidden = false
+      let songUrlString = vm.songs[indexPath.row].previewUrl
+      vm.playSong(url: songUrlString)
    }
 }
 

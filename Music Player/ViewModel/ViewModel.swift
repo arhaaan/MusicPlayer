@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 class ViewModel {
    var songs = [Song]() {
@@ -15,6 +16,12 @@ class ViewModel {
    }
    var isLoading = false
    var searchText = ""
+   
+   //Player
+   private var player: AVPlayer?
+   private var currentItem: AVPlayerItem?
+   
+   var isPlaying = false
    
    private let service: WebService
    
@@ -43,5 +50,28 @@ class ViewModel {
             }
          }
       }
+   }
+   
+   func playSong(url: String) {
+      guard let url = URL(string: url) else { return }
+              
+      let playerItem = AVPlayerItem(url: url)
+      currentItem = playerItem
+      player = AVPlayer(playerItem: playerItem)
+              
+//      playerItem.addObserver(self, forKeyPath: #keyPath(AVPlayerItem.status),options: [.old, .new], context: nil)
+      
+      player?.play()
+      isPlaying.toggle()
+   }
+   
+   func stop() {
+      player?.pause()
+      isPlaying.toggle()
+   }
+   
+   func play() {
+      player?.play()
+      isPlaying.toggle()
    }
 }
