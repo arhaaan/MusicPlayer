@@ -12,6 +12,8 @@
 		EE46FD162DD837A000BCF0BF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46FD152DD837A000BCF0BF /* Song.swift */; };
 		EE46FD192DD83CEF00BCF0BF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46FD182DD83CEF00BCF0BF /* WebService.swift */; };
 		EE46FD1B2DD8494400BCF0BF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46FD1A2DD8494400BCF0BF /* ViewModel.swift */; };
+		EE46FD1F2DD86E9400BCF0BF /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE46FD1E2DD86E9400BCF0BF /* SongTableViewCell.xib */; };
+		EE46FD202DD86E9400BCF0BF /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46FD1D2DD86E9400BCF0BF /* SongTableViewCell.swift */; };
 		EE6D521E2DD8273B00D0D1C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D521D2DD8273B00D0D1C8 /* AppDelegate.swift */; };
 		EE6D52202DD8273B00D0D1C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D521F2DD8273B00D0D1C8 /* SceneDelegate.swift */; };
 		EE6D52222DD8273B00D0D1C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D52212DD8273B00D0D1C8 /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		EE46FD152DD837A000BCF0BF /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		EE46FD182DD83CEF00BCF0BF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EE46FD1A2DD8494400BCF0BF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EE46FD1D2DD86E9400BCF0BF /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		EE46FD1E2DD86E9400BCF0BF /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		EE6D521A2DD8273B00D0D1C8 /* Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6D521D2DD8273B00D0D1C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE6D521F2DD8273B00D0D1C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 		EE46FD122DD82E6B00BCF0BF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE46FD1C2DD86E7600BCF0BF /* Cell */,
 				EE46FD0E2DD82E0000BCF0BF /* PlayerViewController.swift */,
 				EE46FD0F2DD82E0000BCF0BF /* PlayerViewController.xib */,
 			);
@@ -117,6 +122,15 @@
 				EE46FD182DD83CEF00BCF0BF /* WebService.swift */,
 			);
 			path = WebService;
+			sourceTree = "<group>";
+		};
+		EE46FD1C2DD86E7600BCF0BF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE46FD1D2DD86E9400BCF0BF /* SongTableViewCell.swift */,
+				EE46FD1E2DD86E9400BCF0BF /* SongTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EE6D52112DD8273B00D0D1C8 = {
@@ -278,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE46FD1F2DD86E9400BCF0BF /* SongTableViewCell.xib in Resources */,
 				EE6D52272DD8274300D0D1C8 /* Assets.xcassets in Resources */,
 				EE46FD112DD82E0000BCF0BF /* PlayerViewController.xib in Resources */,
 				EE6D522A2DD8274300D0D1C8 /* Base in Resources */,
@@ -310,6 +325,7 @@
 				EE6D52222DD8273B00D0D1C8 /* ViewController.swift in Sources */,
 				EE46FD102DD82E0000BCF0BF /* PlayerViewController.swift in Sources */,
 				EE6D521E2DD8273B00D0D1C8 /* AppDelegate.swift in Sources */,
+				EE46FD202DD86E9400BCF0BF /* SongTableViewCell.swift in Sources */,
 				EE6D52202DD8273B00D0D1C8 /* SceneDelegate.swift in Sources */,
 				EE46FD162DD837A000BCF0BF /* Song.swift in Sources */,
 				EE46FD1B2DD8494400BCF0BF /* ViewModel.swift in Sources */,
