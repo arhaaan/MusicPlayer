@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE46FD102DD82E0000BCF0BF /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46FD0E2DD82E0000BCF0BF /* PlayerViewController.swift */; };
+		EE46FD112DD82E0000BCF0BF /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE46FD0F2DD82E0000BCF0BF /* PlayerViewController.xib */; };
 		EE6D521E2DD8273B00D0D1C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D521D2DD8273B00D0D1C8 /* AppDelegate.swift */; };
 		EE6D52202DD8273B00D0D1C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D521F2DD8273B00D0D1C8 /* SceneDelegate.swift */; };
 		EE6D52222DD8273B00D0D1C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D52212DD8273B00D0D1C8 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE46FD0E2DD82E0000BCF0BF /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		EE46FD0F2DD82E0000BCF0BF /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 		EE6D521A2DD8273B00D0D1C8 /* Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6D521D2DD8273B00D0D1C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE6D521F2DD8273B00D0D1C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE46FD122DD82E6B00BCF0BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE46FD0E2DD82E0000BCF0BF /* PlayerViewController.swift */,
+				EE46FD0F2DD82E0000BCF0BF /* PlayerViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE46FD132DD82E7400BCF0BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EE46FD142DD82E7B00BCF0BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EE6D52112DD8273B00D0D1C8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +126,9 @@
 		EE6D521C2DD8273B00D0D1C8 /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
+				EE46FD142DD82E7B00BCF0BF /* Model */,
+				EE46FD132DD82E7400BCF0BF /* ViewModel */,
+				EE46FD122DD82E6B00BCF0BF /* View */,
 				EE6D521D2DD8273B00D0D1C8 /* AppDelegate.swift */,
 				EE6D521F2DD8273B00D0D1C8 /* SceneDelegate.swift */,
 				EE6D52212DD8273B00D0D1C8 /* ViewController.swift */,
@@ -232,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE6D52272DD8274300D0D1C8 /* Assets.xcassets in Resources */,
+				EE46FD112DD82E0000BCF0BF /* PlayerViewController.xib in Resources */,
 				EE6D522A2DD8274300D0D1C8 /* Base in Resources */,
 				EE6D52252DD8273B00D0D1C8 /* Base in Resources */,
 			);
@@ -259,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE6D52222DD8273B00D0D1C8 /* ViewController.swift in Sources */,
+				EE46FD102DD82E0000BCF0BF /* PlayerViewController.swift in Sources */,
 				EE6D521E2DD8273B00D0D1C8 /* AppDelegate.swift in Sources */,
 				EE6D52202DD8273B00D0D1C8 /* SceneDelegate.swift in Sources */,
 			);
