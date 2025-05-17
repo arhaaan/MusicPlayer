@@ -9,26 +9,47 @@ import UIKit
 
 class PlayerViewController: UIViewController {
 
-   @IBOutlet weak var searchBar: UISearchBar!
+   @IBOutlet weak var searchTextField: UITextField!
    @IBOutlet weak var tableView: UITableView!
    @IBOutlet weak var playerControlView: UIView!
    @IBOutlet weak var playButton: UIButton!
-   @IBOutlet weak var slider: UISlider!
+//   @IBOutlet weak var slider: UISlider!
+   
+   private let vm : ViewModel
+   
+   init(vm: ViewModel) {
+      self.vm = vm
+      super.init(nibName: nil, bundle: nil)
+   }
+   
+   required init?(coder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+   }
    
    override func viewDidLoad() {
         super.viewDidLoad()
+      
+      searchTextField.delegate = self
+      searchTextField.returnKeyType = .search
 
-      WebService().findSongs(term: "jonas brothers") { result in
-         switch result {
-         case .success(let success):
-            print(success)
-         case .failure(let failure):
-            print(failure)
+      vm.onSongsUpdated = { [weak self] in
+         DispatchQueue.main.async {
+            self?.tableView.reloadData()
          }
       }
     }
-
-
+      
+   @IBAction func searchEditingChanged(_ sender: Any) {
+      if let text = searchTextField.text {
+         vm.searchText = text
+         print(vm.searchText)
+      }
+   }
+   
+//   @IBAction func searchDidEnd(_ sender: Any) {
+//      vm.searchSongs()
+//   }
+   
    @IBAction func prevButtonTapped(_ sender: Any) {
    }
    
@@ -36,5 +57,14 @@ class PlayerViewController: UIViewController {
    }
    
    @IBAction func nextButtonTapped(_ sender: Any) {
+   }
+}
+
+extension PlayerViewController: UITextFieldDelegate {
+   
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      textField.resignFirstResponder()
+      vm.searchSongs()
+      return true
    }
 }

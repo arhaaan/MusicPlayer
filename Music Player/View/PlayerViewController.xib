@@ -13,8 +13,7 @@
             <connections>
                 <outlet property="playButton" destination="F44-Gr-iSz" id="KPx-C6-sLY"/>
                 <outlet property="playerControlView" destination="WbT-fX-da5" id="JtE-DZ-258"/>
-                <outlet property="searchBar" destination="yYS-9r-g1R" id="zfG-us-RYP"/>
-                <outlet property="slider" destination="0aM-aP-GZv" id="aiy-RY-LHK"/>
+                <outlet property="searchTextField" destination="m7m-VY-0iy" id="gYH-bo-7XS"/>
                 <outlet property="tableView" destination="3fY-OS-Ar6" id="koF-fQ-VXX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,15 +23,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yYS-9r-g1R">
-                    <rect key="frame" x="0.0" y="59" width="393" height="56"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="pV9-YH-Wcl"/>
-                    </connections>
-                </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3fY-OS-Ar6">
-                    <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                    <rect key="frame" x="0.0" y="114" width="393" height="704"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbT-fX-da5">
@@ -96,17 +88,28 @@
                         <constraint firstItem="0aM-aP-GZv" firstAttribute="top" secondItem="E5s-5h-Mr5" secondAttribute="bottom" constant="10" id="xsx-q9-tbh"/>
                     </constraints>
                 </view>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m7m-VY-0iy">
+                    <rect key="frame" x="20" y="64" width="353" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="MsQ-AM-lQe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="searchEditingChanged:" destination="-1" eventType="editingDidEnd" id="V8d-ws-mAx"/>
+                    </connections>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3fY-OS-Ar6" secondAttribute="bottom" id="1CW-9j-ccb"/>
-                <constraint firstItem="yYS-9r-g1R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QeR-si-ESa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m7m-VY-0iy" secondAttribute="trailing" constant="20" id="Q5s-Fr-VFI"/>
+                <constraint firstItem="3fY-OS-Ar6" firstAttribute="top" secondItem="m7m-VY-0iy" secondAttribute="bottom" constant="5" id="TVq-F4-uGC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WbT-fX-da5" secondAttribute="bottom" id="WfG-6K-skg"/>
-                <constraint firstItem="3fY-OS-Ar6" firstAttribute="top" secondItem="yYS-9r-g1R" secondAttribute="bottom" id="bXQ-7y-Rcp"/>
-                <constraint firstItem="yYS-9r-g1R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="htO-QS-mln"/>
+                <constraint firstItem="m7m-VY-0iy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dTP-kV-KWE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WbT-fX-da5" secondAttribute="trailing" id="iwh-7B-Mix"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yYS-9r-g1R" secondAttribute="trailing" id="q58-HC-dej"/>
+                <constraint firstItem="m7m-VY-0iy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="jH3-GA-87r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3fY-OS-Ar6" secondAttribute="trailing" id="sak-f6-pGu"/>
                 <constraint firstItem="3fY-OS-Ar6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tdZ-aC-hZ0"/>
                 <constraint firstItem="WbT-fX-da5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uEk-An-p5F"/>
