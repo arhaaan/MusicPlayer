@@ -18,7 +18,14 @@ class PlayerViewController: UIViewController {
    override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      WebService().findSongs(term: "jonas brothers") { result in
+         switch result {
+         case .success(let success):
+            print(success)
+         case .failure(let failure):
+            print(failure)
+         }
+      }
     }
 
 
